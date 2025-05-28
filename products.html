@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جميع المنتجات - الاء محجوب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <a href="index.html">الاء محجوب</a>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                        <li><a href="index.html#about" class="nav-link">من أنا</a></li>
+                        <li><a href="products.html" class="nav-link active">المنتجات</a></li>
+                        <li><a href="index.html#gallery" class="nav-link">معرض الأعمال</a></li>
+                        <li><a href="index.html#testimonials" class="nav-link">آراء العملاء</a></li>
+                        <li><a href="index.html#contact" class="nav-link">تواصل</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <!-- Cart -->
+                        <div class="cart-container">
+                            <button id="cart-btn" class="cart-btn">
+                                <span class="cart-icon">🛍️</span>
+                                <span id="cart-count" class="cart-count">0</span>
+                            </button>
+
+                            <!-- Cart Dropdown -->
+                            <div id="cart-dropdown" class="cart-dropdown">
+                                <div class="cart-header">
+                                    <h3>السلة (<span id="cart-total">0</span> منتج)</h3>
+                                </div>
+                                <div id="cart-items" class="cart-items">
+                                    <div class="cart-empty">السلة فارغة</div>
+                                </div>
+                                <div id="cart-actions" class="cart-actions">
+                                    <button id="whatsapp-order" class="btn-primary">طلب الكل عبر واتساب</button>
+                                    <button id="clear-cart" class="btn-outline">إفراغ السلة</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Menu Toggle -->
+                        <button id="mobile-menu-btn" class="mobile-menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div id="mobile-menu" class="mobile-menu">
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html" class="mobile-nav-link">الرئيسية</a></li>
+                        <li><a href="index.html#about" class="mobile-nav-link">من أنا</a></li>
+                        <li><a href="products.html" class="mobile-nav-link">المنتجات</a></li>
+                        <li><a href="index.html#gallery" class="mobile-nav-link">معرض الأعمال</a></li>
+                        <li><a href="index.html#testimonials" class="mobile-nav-link">آراء العملاء</a></li>
+                        <li><a href="index.html#contact" class="mobile-nav-link">تواصل</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">جميع منتجاتنا</h1>
+                <p class="page-description">اكتشفي مجموعتنا الكاملة من الطُرح والتياب السودانية الأصيلة</p>
+            </div>
+        </section>
+
+        <!-- Filters and Search -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="search-and-filters">
+                    <!-- Search Box -->
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="ابحثي عن منتج..." class="search-input">
+                        <span class="search-icon">🔍</span>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="categories-filter">
+                        <button class="category-btn active" data-category="الكل">الكل</button>
+                        <button class="category-btn" data-category="ثياب">ثياب</button>
+                        <button class="category-btn" data-category="طرح">طرح</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div class="container">
+                <div id="products-grid" class="products-grid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+
+                <div id="no-products" class="no-products" style="display: none;">
+                    <div class="no-products-icon">😔</div>
+                    <h3>لا توجد منتجات</h3>
+                    <p>جربي البحث بكلمات أخرى أو اختاري فئة مختلفة</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-title">الاء محجوب</div>
+                <p class="footer-description">
+                    تصاميم أزياء سودانية أصيلة بلمسة عصرية
+                </p>
+                <p class="footer-copyright">
+                    © 2025 الاء محجوب. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاء محجوب - مصممة أزياء سودانية</title>
+    <meta name="description" content="متجر الاء محجوب للأزياء السودانية - طرح وتياب فاخرة بتصاميم عصرية وأصيلة">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <a href="index.html">الاء محجوب</a>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                        <li><a href="#about" class="nav-link">من أنا</a></li>
+                        <li><a href="products.html" class="nav-link">المنتجات</a></li>
+                        <li><a href="#gallery" class="nav-link">معرض الأعمال</a></li>
+                        <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
+                        <li><a href="#contact" class="nav-link">تواصل</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <!-- Cart -->
+                        <div class="cart-container">
+                            <button id="cart-btn" class="cart-btn">
+                                <span class="cart-icon">🛍️</span>
+                                <span id="cart-count" class="cart-count">0</span>
+                            </button>
+
+                            <!-- Cart Dropdown -->
+                            <div id="cart-dropdown" class="cart-dropdown">
+                                <div class="cart-header">
+                                    <h3>السلة (<span id="cart-total">0</span> منتج)</h3>
+                                </div>
+                                <div id="cart-items" class="cart-items">
+                                    <div class="cart-empty">السلة فارغة</div>
+                                </div>
+                                <div id="cart-actions" class="cart-actions">
+                                    <button id="whatsapp-order" class="btn-primary">طلب الكل عبر واتساب</button>
+                                    <button id="clear-cart" class="btn-outline">إفراغ السلة</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Menu Toggle -->
+                        <button id="mobile-menu-btn" class="mobile-menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div id="mobile-menu" class="mobile-menu">
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html" class="mobile-nav-link">الرئيسية</a></li>
+                        <li><a href="#about" class="mobile-nav-link">من أنا</a></li>
+                        <li><a href="products.html" class="mobile-nav-link">المنتجات</a></li>
+                        <li><a href="#gallery" class="mobile-nav-link">معرض الأعمال</a></li>
+                        <li><a href="#testimonials" class="mobile-nav-link">آراء العملاء</a></li>
+                        <li><a href="#contact" class="mobile-nav-link">تواصل</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">الاء محجوب</h1>
+                        <h2 class="hero-subtitle">مصممة أزياء سودانية</h2>
+                        <p class="hero-description">
+                            تصاميم أصيلة بلمسة عصرية، نقدم لك أجمل الطُرح والتياب السودانية المصممة بعناية فائقة لتعكس جمال التراث السوداني
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#featured-products" class="btn-primary">اكتشفي المجموعة</a>
+                            <button onclick="openWhatsApp('مرحباً، أريد الاستفسار عن منتجاتكم')" class="btn-outline-2">تواصلي معنا</button>
+                        </div>
+                    </div>
+                        
+                    <div class="hero-image">
+                      <img src="https://i.postimg.cc/05zZgm3Y/FB-IMG-1748433518288.webp" alt="الاء محجوب">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="featured-products" class="featured-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">منتجات مختارة</h2>
+                    <p class="section-description">
+                        اكتشفي مجموعة مختارة من أجمل منتجاتنا
+                    </p>
+                </div>
+
+                <div id="featured-products-grid" class="products-grid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+
+                <div class="view-all-container">
+                    <a href="products.html" class="btn-primary">عرض جميع المنتجات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">معرض الأعمال</h2>
+                    <p class="section-description">
+                        استعرضي أجمل تصاميمنا وإبداعاتنا
+                    </p>
+                </div>
+
+                <div class="gallery-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev" id="prev-btn">‹</button>
+                        <div class="carousel-track" id="carousel-track">
+                            <!-- Gallery items will be loaded here -->
+                        </div>
+                        <button class="carousel-btn next" id="next-btn">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">من هي الاء محجوب؟</h2>
+                        <p class="about-description">
+                            مصممة أزياء سودانية شابة تحمل شغفاً عميقاً بالتراث السوداني والأزياء العصرية. 
+                            تخصصت في تصميم الطُرح والتياب السودانية بلمسة حديثة تحافظ على الأصالة.
+                        </p>
+                        <p class="about-description">
+                            بدأت رحلتها في عالم التصميم من حبها للثقافة السودانية ورغبتها في إبراز جمال 
+                            التراث السوداني للعالم من خلال تصاميم فريدة ومميزة.
+                        </p>
+                        <div class="stats">
+                            <div class="stat">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">سنوات خبرة</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">1000+</div>
+                                <div class="stat-label">عميلة سعيدة</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="about-gradient">
+                              <img src="https://i.postimg.cc/90wDxcL9/FB-IMG-1748433738947.webp" alt="الاء محجوب">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">آراء عملائنا</h2>
+                    <p class="section-description">ما يقوله عملاؤنا عن تجربتهم معنا</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">F</div>
+                            <h4 class="testimonial-name">فاطمة أحمد</h4>
+                        </div>
+                        <p class="testimonial-text">
+                            "تصاميم الاء رائعة وتجمع بين الأصالة والعصرية. ثوبي كان محل إعجاب الجميع!"
+                        </p>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">م</div>
+                            <h4 class="testimonial-name">مريم محمد</h4>
+                        </div>
+                        <p class="testimonial-text">
+                            "الطرحة التي اشتريتها من الاء جودتها ممتازة وتصميمها فريد من نوعه."
+                        </p>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">ع</div>
+                            <h4 class="testimonial-name">عائشة إبراهيم</h4>
+                        </div>
+                        <p class="testimonial-text">
+                            "خدمة ممتازة وتعامل راقي. أنصح كل امرأة بتجربة تصاميم الاء الرائعة."
+                        </p>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">تواصلي معنا</h2>
+                    <p class="section-description">نحن هنا للإجابة على استفساراتك وتلبية طلباتك</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item" onclick="openWhatsApp('مرحباً، أريد الاستفسار عن منتجاتكم')">
+                            <div class="contact-icon">
+                              <svg class="w-[42px] h-[42px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" viewBox="0 0 24 24">
+  <path fill="currentColor" fill-rule="evenodd" d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z" clip-rule="evenodd"/>
+  <path fill="currentColor" d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"/>
+</svg>
+
+
+                            </div>
+                            <div class="contact-details">
+                                <h4>واتساب</h4>
+                                <p>201222292977+</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+</svg>
+
+                            </div>
+                            <div class="contact-details">
+                                <h4>البريد الإلكتروني</h4>
+                                <p>info@alaamahjoub.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item" onclick="window.location.href='https://maps.app.goo.gl/5Zm7AhmvioKeAx4s9'">
+                            <div class="contact-icon">
+                              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
+</svg>
+
+                            </div>
+                            <div class="contact-details">
+                                <h4>العنوان</h4>
+                                <p>فيصل، الجيزة</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <button onclick="window.open('https://www.facebook.com/share/1ATTLDKwjM/', '_blank')" class="social-btn">
+                              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+</svg>
+
+                            </button>
+                            <button onclick="alert('سيتم إضافة رابط انستغرام قريباً!')" class="social-btn">
+                              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
+  <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+</svg>
+
+                            </button>
+                            <button onclick="openWhatsApp('مرحباً، وصلت من موقعكم الإلكتروني')" class="social-btn">
+                              <svg class="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
+  <path fill="currentColor" fill-rule="evenodd" d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z" clip-rule="evenodd"/>
+  <path fill="currentColor" d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"/>
+</svg>
+
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">الاسم</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">الرسالة</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-title">الاء محجوب</div>
+                <p class="footer-description">
+                    تصاميم أزياء سودانية أصيلة بلمسة عصرية
+                </p>
+                <p class="footer-copyright">
+                    © 2025 الاء محجوب. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
