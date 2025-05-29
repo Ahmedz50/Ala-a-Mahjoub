@@ -52,7 +52,7 @@ function displayFeaturedProducts() {
 
     // Get 3 random products
     const shuffled = [...products].sort(() => 0.5 - Math.random());
-    const featuredProducts = shuffled.slice(0, 3);
+    const featuredProducts = shuffled.slice(0, 9);
 
     grid.innerHTML = '';
     featuredProducts.forEach(product => {
